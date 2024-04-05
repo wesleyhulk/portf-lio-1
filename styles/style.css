@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{ 
+    --cor-primaria: #A73121;
+    --cor-secundaria:#FFBB64;
+    --cor-terciaria: #8aa510;
+    --cor-quadrinario: linear-gradient(var(--cor-primaria), var(--cor-secundaria), var(--cor-terciaria));
+    --cor-quintenario:  #7D0A0A;
+    --cor-sextenario: #00ffff; 
+
+    --font-primaria:  "Krona One", sans-serif;
+    --font-secundaria: "montserrat" sans-serif;
+    
+    --borde-primario: double #F8E559;
+
+}
+
+*{
+ margin: 0;
+ padding: 0;   
+}
+body {
+    /*height: 100vh;serve para garantira tela total do site altura de 100%*/
+    box-sizing: border-box;/*serve para garantir que elemento filho fique dentro body*/
+    background-color: var(--cor-primaria);
+    color:var(--cor-secundaria);
+    background-image: var(--cor-quadrinario);
+    }
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+.cabecalho__menu {
+    display: flex;
+        gap: 80px;
+}
+.cabecalho__menu__link {
+    font-family:var(--font-secundaria);
+    font-size: 1.5rem; 
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;   
+}
+.cabecalho__menu__link:hover {
+    color: #BED754;
+}
+.titulo-destaque{
+    color: var(--cor-terciaria);/*cor da letra*/
+}
+.apresentacao {
+    padding: 5% 15%;
+    display: flex;/*Permite um contexto flexível para todos os seus filhos diretos.*/
+    align-items: center;/*serve para alinhamento do texto centralizar*/
+    justify-content: space-between;/*serve para justificar a caixa de texto*/
+    gap:82px;
+}
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem; /*tamanho da fonte da letra*/
+    font-family: var(--font-primaria);
+    color:#00ffff ;
+}
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--font-secundaria);/*fonte do estilo da letras.*/
+    color: var(--cor-quintenario);
+}
+.apresentacao__links__subtitulo{
+    font-family:var(--font-primaria); /*tipo de fonte da letra*/
+    font-size: 1.5rem;/*tamanho da fonte*/
+    font-weight: 400;/*peso da fonte da letra*/
+    color: var(--cor-quintenario)
+}
+.apresentacao__links{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;/*foi colocado na segunda etapa da aula e pra ficar modo coluna*/
+    align-items: center;/*foi alterada por conta do(flex acima)tem ser os dois alterado.serve para centralizar*/
+    gap: 32px;
+}
+.apresentacao__links__navegacao{
+    /*background-color: #22d4fd; /* cor da borda geral do link*/
+    display: flex;
+    justify-content: center;
+    gap:16px ;
+    border: 2px solid #22d4fd; /*serve para colocar bordas com espessura que chama atenção*/
+    text-align: center; /*centralização do texto*/
+    width: 100%; /*largura dos links*/
+    border-radius: 8px; /*alinhar o redondamento da borda*/
+    font-size: 1.5rem; /*tamanho da fonte da letra*/
+    font-weight: 600; /*peso da fonte*/
+    padding: 21.5px 0; /*tamanho do botão da parte superior e inferio 21.5, ja pelos lados não precisa e 0*/
+    text-decoration: none; /*retirada da linha da parte inferior do nome instagram que ja e padrão links. */    color: black; /*cor da forte da letra. */
+    font-family: var(--font-secundaria); /*fonte do estilo da letras.*/
+}
+.texto__destaque{
+    color: var(--cor-terciaria);
+}
+.apresentacao__links__navegacao:hover:nth-child(2){ /*hover - muda a cor quando o mouse chega na borda*/
+    background-color: rgb(84, 109, 9);
+    color: rgb(22, 22, 21);
+    border: 2px var(--borde-primario);
+    transition: 1s;
+}
+.apresentacao__links__navegacao:hover:nth-child(3){
+    background-color: rgb(78, 188, 240);
+    color: rgb(15, 16, 15);
+    border: 2px var(--borde-primario);
+    transition: 1s;
+}
+.apresentacao__links__navegacao:hover:nth-child(4){ /*hover - muda a cor quando o mouse chega na borda*/
+    background-color: rgb(250, 103, 238);
+    color: rgb(22, 22, 21);
+    border: 2px var(--borde-primario);
+    transition: 1s;
+}
+.apresentacao__links__navegacao:hover:nth-child(5){ /*hover - muda a cor quando o mouse chega na borda*/
+    background-color: rgb(152, 44, 185);
+    color: rgb(22, 22, 21);
+    border: 2px var(--borde-primario);
+    transition: 1s;
+}
+.apresentacao__imagem{
+    width: 50%;
+}
+.rodape{
+    padding: 24px;
+    color:var(--cor-primaria);
+    background-color:var(--cor-sextenario);
+    text-align: center;
+    font-family:var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.apresentacao__conteudo__lista {
+    font: var(--font-secundaria);
+    font-size:1.5rem;
+    color: var(--cor-quintenario);
+}
+@media(max-width:1200px) {
+
+    .cabecalho {
+        padding: 10%;
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+        padding: 5%;
+    }   
+    
+}
